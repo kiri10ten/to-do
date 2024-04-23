@@ -2,7 +2,7 @@
     <div >
   <img class="ml-12 pt-5 pb-5" src="https://i.picasion.com/gl/92/iEGN.gif" width="590" height="30" border="0" alt="https://picasion.com/gl/iEGN/" />
 </div>
-<div class=" w-1/2 h-auto p-2 ml-6 bg-slate-600 " >   
+<div class=" w-1/2 h-auto p-2 ml-6 bg-emerald-600 opacity-35 " >   
 <div class="p-6"  v-for="task in alltasks">
 <div  :class="{'line-through':task.taskstatus}" @click="changestatus(task)">{{task.taskname}}</div>
 </div>
