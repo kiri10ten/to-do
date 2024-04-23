@@ -31,7 +31,7 @@ const addnewtask=async()=>{
  
  
 
-  const todo = await $fetch ('http://localhost:3000/api/fetchtasks',{
+  const todo = await $fetch ('/api/fetchtasks',{
   method:'POST',
   body:{
     "taskname": taskname.value,
