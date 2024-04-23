@@ -25,7 +25,7 @@ console.log(alltasks)
 const changestatus =async(task)=>{
     console.log('this is getting changed')
     task.taskstatus=!task.taskstatus
-    const value =await $fetch('/api/fetchtasks/'+task.id, {
+    const value =await $fetch('api/fetchtasks/'+task.id, {
     method: 'PUT',
     body: {
         "taskstatus":task.taskstatus 
@@ -36,7 +36,7 @@ const changestatus =async(task)=>{
 
 
 const gettasks =async()=>{
-    alltasks.value = await $fetch("/api/fetchtasks")
+    alltasks.value = await $fetch("api/fetchtasks")
 }
 
 watch (()=>props.refetch,async(newrefetch,oldrefetch)=>{
