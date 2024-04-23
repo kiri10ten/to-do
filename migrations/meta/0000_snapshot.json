@@ -1,11 +1,11 @@
 {
   "version": "5",
   "dialect": "sqlite",
-  "id": "e965d475-0f22-4d33-84f9-36412ede348f",
+  "id": "511ad28c-7d27-4048-9171-25f2e794afdb",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
-    "countries": {
-      "name": "countries",
+    "tasks": {
+      "name": "tasks",
       "columns": {
         "id": {
           "name": "id",
@@ -17,6 +17,13 @@
         "name": {
           "name": "name",
           "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "taskstatus": {
+          "name": "taskstatus",
+          "type": "integer",
           "primaryKey": false,
           "notNull": false,
           "autoincrement": false

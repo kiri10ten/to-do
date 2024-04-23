@@ -3,5 +3,3 @@ CREATE TABLE `tasks` (
 	`name` text,
 	`taskstatus` integer
 );
---> statement-breakpoint
-DROP TABLE `countries`;

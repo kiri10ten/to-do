@@ -1,14 +1,10 @@
-import { sqliteTable, text, integer, uniqueIndex } from 'drizzle-orm/sqlite-core';
-import {InferInsertModel} from "drizzle-orm"
-import { boolean } from 'drizzle-orm/mysql-core';
-
+import { sql } from 'drizzle-orm';
+import { integer, sqliteTable, text } from 'drizzle-orm/sqlite-core';
 export const tasks = sqliteTable('tasks', {
-    id: integer('id').primaryKey(),
-    taskname: text('name'),
-    taskstatus:integer('taskstatus',{mode:'boolean'})
-    
-  }, 
-);
+  id: integer('id').primaryKey(),
+  taskname: text('taskname').notNull(),
+  taskstatus: integer('taskstatus').notNull(),
+});
 
-export type InsertTask =InferInsertModel<typeof tasks>;
-
+export type InsertTask = typeof tasks.$inferInsert;
+export type Selecttasks = typeof tasks.$inferSelect;
